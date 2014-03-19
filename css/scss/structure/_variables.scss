@@ -1,0 +1,59 @@
+// SET UP YOUR VARIABLES IN THIS FILE
+
+
+// Colours
+// ------------------------------------------------------------
+
+// Define your main colour palette
+// principal
+
+
+$noir : #333333;
+$rouge : #e31937;
+$gris : #d7d7d7;
+$gris-fonce : #6f6f6f;
+$gris-fond : #f2f2f2;
+
+
+$brown-main: #5f3820;
+$brown-light: #83644a;
+$brown-second: #e3ceac;
+
+$white: #ffffff;
+
+$border-gris : #787878;
+$sous-titre : #dd9716;
+
+//marca
+$yellow-pasion: #ffdd00;
+$green-ipa: #77BC1F;
+$orange-avellana: #f7971c;
+
+// colors home
+$azul-indigo: #547794;
+$azul-sea: #3498db;
+$azul-footer: #34495e;
+$green: #7DB6B0;
+$orange: #f39c12;
+
+
+
+
+$primary							: #666;
+$secondary							: #222;	
+$tertiary							: #444;
+
+
+
+// Assign colours to variable roles
+$base-color							: $primary;
+$heading-color						: $secondary;
+$secondary-heading-color			: $tertiary;
+
+
+
+// Links
+$action								: $primary;
+$action-respond						: $secondary;
+$secondary-action					: $action-respond;
+$secondary-action-respond			: $action;

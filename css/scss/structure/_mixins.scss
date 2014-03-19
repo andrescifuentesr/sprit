@@ -1,0 +1,130 @@
+//========================================== Font Face
+@font-face {
+    font-family: 'latolight';
+    src: url('../../fonts/lato-lig-webfont.eot');
+    src: url('../../fonts/lato-lig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/lato-lig-webfont.woff') format('woff'),
+         url('../../fonts/lato-lig-webfont.ttf') format('truetype'),
+         url('../../fonts/lato-lig-webfont.svg#latolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latolight_italic';
+    src: url('../../fonts/lato-ligita-webfont.eot');
+    src: url('../../fonts/lato-ligita-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/lato-ligita-webfont.woff') format('woff'),
+         url('../../fonts/lato-ligita-webfont.ttf') format('truetype'),
+         url('../../fonts/lato-ligita-webfont.svg#latolight_italic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'maven_pro_light300';
+    src: url('../../fonts/mavenprolight-300-webfont.eot');
+    src: url('../../fonts/mavenprolight-300-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/mavenprolight-300-webfont.woff') format('woff'),
+         url('../../fonts/mavenprolight-300-webfont.ttf') format('truetype'),
+         url('../../fonts/mavenprolight-300-webfont.svg#maven_pro_light300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+//==========================================
+/* Media queries */
+
+@mixin mq($mq) {
+  @if $mq == desk {
+    @media (min-width: 90em) { @content; }
+  }
+  @if $mq == lap {
+     @media only screen and (min-width: 65em)  and (max-width:  90em) { @content; }
+  }
+  @if $mq == tablet {
+     @media only screen and (min-width: 40em)  and (max-width:  65em) { @content; }
+  }
+  @if $mq == phone {
+    @media (max-width: 40em) { @content; }
+  }
+}
+
+@mixin box-emboss($outerOpacity, $innerOpacity) {
+  box-shadow:
+    rgba(lighten($verde, 10%), $outerOpacity) 0px 1px 0, 
+    rgba(darken($verde, 10%), $innerOpacity) 0 1px 0 inset;
+}
+
+
+/* TEXT SHADOW */
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+/* Linear Gradient Stop 5% */
+@mixin linear-5 {
+	background: -webkit-gradient(linear, left top,left bottom, darken($verde,10%), color-stop(0.05, $verde));
+	background: -webkit-linear-gradient(top, darken($verde,10%), $verde 5%);
+	background: -moz-linear-gradient(top, darken($verde,10%), $verde 5%);
+	background: -ms-linear-gradient(top, darken($verde,10%), $verde 5%);
+	background: -o-linear-gradient(top, darken($verde,10%), $verde 5%);
+}
+
+/* Clearing */
+@mixin clear() {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+/* Text offscreen links */
+@mixin linkTextOffscreen() {
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    font-size: 0;
+    text-align: start;
+}
+
+
+/* Retina Images */
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+
+/* Opacity */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+/* Box Sizing */
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+     -moz-box-sizing: $box-model; // Firefox <= 19
+          box-sizing: $box-model;
+}

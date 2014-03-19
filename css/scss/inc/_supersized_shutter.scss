@@ -1,0 +1,34 @@
+/*
+
+	Supersized - Fullscreen Slideshow jQuery Plugin
+	Version : 3.2.7
+	Site	: www.buildinternet.com/project/supersized
+	
+	Theme 	: Shutter 1.2
+	Author	: Sam Dunn
+	Company : One Mighty Roar (www.onemightyroar.com)
+	License : MIT License / GPL License
+	
+*/
+
+	/* Controls Bar
+	----------------------------*/
+#controls-wrapper { margin:0 auto; height:50px; width:100%; bottom:0px; left:0; z-index:4;  position:fixed; padding-left:230px;
+	@include mq(phone) {padding-left:0; }
+}
+#controls { overflow:hidden; height:100%; position:relative; text-align:left; z-index:5; }
+
+//navigation avec les fleches
+#prevslide, #nextslide{ position:absolute; height:50px; width:50px; top:50%; margin-top:-21px; transition: 0.3s all ease-in;}
+#prevslide{ left:40px; background:url('../../../img/fleche-back.png') $rouge no-repeat center center; }
+#nextslide{ right:40px; background:url('../../../img/fleche-forward.png') $rouge no-repeat center center; }
+#prevslide:active, #nextslide:active{ margin-top:-19px; }
+#prevslide:hover, #nextslide:hover{ cursor:pointer; background-color: $gris-fonce; }
+
+//navigation avec les dots
+ul#slide-list{ padding:19px 0; /*float:left; position:absolute; left:70%;*/float:right; margin-right: 8%; width: 220px; }
+ul#slide-list li{ list-style:none; float:left; margin:0 5px 0 0; }
+ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background: $rouge; }
+ul#slide-list li a{ display:block; width:15px; height:15px; border-radius: 15px; border: 1px solid $white; background:$gris-fonce ; transition: 0.3s all ease-out;}
+ul#slide-list li a:hover{ background: $rouge; cursor:pointer; }
+				

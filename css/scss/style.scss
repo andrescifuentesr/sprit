@@ -1,0 +1,140 @@
+//structure
+@import 'structure/mixins';
+@import 'structure/variables';
+@import 'inc/template';
+@import 'structure/grid';
+@import 'structure/typography';
+
+// inc
+@import 'inc/supersized_core';
+@import 'inc/supersized_shutter';
+@import 'inc/fancybox';
+
+//animations
+
+//theme
+@import 'theme/header';
+@import 'theme/index';
+//@import 'theme/footer';
+@import 'theme/left_sidebar';
+@import 'theme/central';
+@import 'theme/reservation';
+@import 'theme/photos';
+@import 'theme/contact';
+@import 'theme/menu';
+
+
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+
+html {
+	@include base-type($font-properties...);
+}
+
+body {
+	// Ala Trent Walton
+	@include css-hyphens(auto);
+	@extend %breakword;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: 2.5em;
+	font-family: maven_pro_light300;
+	font-weight:normal;
+}
+
+h2 {
+	font-size: 1.5em;
+	color: $rouge;
+	border-bottom: 1px solid $rouge;
+	padding-bottom: 0.5em;
+	margin-top: 1em;
+	font-family: maven_pro_light300;
+	font-weight:normal;
+}
+
+h3 {
+	font-size: 1.2em;
+	font-family: maven_pro_light300;
+	font-weight:normal;
+}
+
+h4 {
+	font-size: 1.2em;
+	font-family: maven_pro_light300;
+	font-weight:normal;
+}
+
+.button {
+		background: url('../../../img/bg-bouton.png') no-repeat;
+		display: inline-block;
+		//width: 241px;
+		font-size:0.85em;
+		padding: .5em 1em .5em 3em;
+		color: $noir;
+		font-family: maven_pro_light300;
+		font-weight:normal;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.border-rouge {
+	border-top: 1px solid $rouge;
+	width: 100%;
+}
+
+.border-gris {
+	border-top: 1px solid $border-gris;
+	width: 100%;
+}
+
+
+/* ========= Helperclass =========== */	
+
+
+%center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+%vertical-center {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+%horizontal-center {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+a { text-decoration:none; }
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}

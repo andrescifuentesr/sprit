@@ -1,0 +1,61 @@
+.page-id-24 .module-left, .page-id-176 .module-left {
+	padding-top: 5em;
+}
+
+.module-left {
+	background: transparent url("../../../img/bg-noir-transparent.png");
+	background: rgba(0, 0, 0, 0.8);
+	color: $white;
+	width: 30%;
+	height: 100%;
+	padding: 0 2em;
+	padding-top: 8em;
+	@include mq(tablet) {width:70%; }
+	@include mq(phone) {width:100%; }
+
+	h1 {font-size: 2em;
+	}
+
+	h2 {
+		color: $rouge;
+		font-size: 1em;
+		border-bottom: none;
+	}
+
+	p {margin-bottom: 1em;
+		font-size: 0.85em;
+	}
+}
+
+.wpcf7-form {
+
+	input {
+		width: 80%;
+	}
+
+	textarea {
+		height: 100px;
+		margin-bottom: 1em;
+	}
+
+	input[type="submit"] {
+		background: url('../../../img/bg-bouton.png') no-repeat;
+		color: $noir;
+		text-transform: uppercase;
+		font-family: maven_pro_light300;
+		font-weight:normal;
+		font-size: 1em;
+		display: block;
+		padding: .4em 0 .3em 1em;
+		width: 50%;
+		border: none;
+		transition: 0.2s background ease-in;
+
+		&:hover {
+			opacity: 0.8;		}
+	}
+
+	p {
+		margin-bottom: 0.5em;
+	}
+}

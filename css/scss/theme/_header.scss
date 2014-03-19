@@ -1,0 +1,278 @@
+html, body, #page, #content {
+	height: 100%;
+	@include mq(phone) {height:auto; }
+}
+
+.site-header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+	background: $gris-fond;
+	width: 230px;
+	padding: 25px 0 0;
+	//@include mq(tablet) {width:100%; }
+	@include mq(phone) {width:100%; position: static;}
+}
+
+#main{ 
+	//overflow: hidden;
+	margin: 0 0 0 230px;
+	height: 100%;
+	position: relative;
+	overflow-y: scroll;
+	@include mq(phone) {width:100%; margin: 0; overflow:auto;}
+}
+
+.site-branding  a {
+	background: url('../../../img/logo-esprit.svg');
+	display : block;
+	height: 150px;
+	width: 64px;
+	text-indent: -9999px;
+	margin: 0 auto;
+}
+
+.no-svg .site-branding  a {
+	background: url('../../../img/logo-esprit.png');
+}
+
+/*--------------------------------------------------------------
+5.1 Menus socail et langues, Newsletter
+--------------------------------------------------------------*/
+
+.bt-newsletter {
+	width: 100%;
+	margin-bottom: 1em;
+	text-align: center;
+
+	a {
+		background: url('../../../img/bt-newsletter.png') no-repeat 40px center;
+		display: block;
+		padding-left: 3.5em;
+		position: relative;
+		color: $noir;
+		font-family: maven_pro_light300;
+		font-weight:normal;
+		text-transform: uppercase;
+
+		&::before {
+			content: "|";
+			position:absolute;
+			left: 35%;
+		}
+
+		&:hover {
+			color: $rouge;
+		}
+
+
+	}
+}
+
+.nav-footer {
+	position: absolute;
+	bottom:0.2em;
+	left:0;
+	width: 100%;
+	@include mq(phone) {left:50%; top: 0.5em; width: 50%; bottom:auto;}
+}
+
+.menu-social{
+	float: left;
+	width: 60%;
+	border-right: 1px solid $gris;
+	margin-bottom: 0.5em;
+
+	ul {
+		margin: 0 auto;
+		width: 110px;
+	}
+
+
+	li {
+		display: inline;
+
+	}
+
+	a {
+		text-indent: -9999px;
+		float: left;
+		display: block;
+		height: 26px;
+		width: 26px;
+		border-radius: 26px;
+		margin-left: 0.5em;
+		transition: 0.2s all ease-in;
+	}
+
+	a[href*="facebook.com"] {
+		background: url('../../../img/icon-facebook.svg') no-repeat $gris-fonce center center;
+		text-align: center;
+	}
+
+	a[href*="twitter.com"] {
+		background: url('../../../img/icon-twitter.svg') no-repeat $gris-fonce center center;
+		text-align: center;
+	}
+
+	a[href*="plus.google.com"] {
+		background: url('../../../img/icon-google-plus.svg') no-repeat $gris-fonce center center;
+		text-align: center;
+	}
+
+	a:hover {
+		background-color: $rouge;
+	}
+}
+
+//==== fallback svg IE8, merci antoine :(
+.no-svg .menu-social  {
+	
+	a[href*="facebook.com"] {
+ 		background-image: url('../../../img/icon-facebook.png');
+ 	}
+
+ 	a[href*="twitter.com"] {
+ 		background-image: url('../../../img/icon-twitter.png');
+ 	}
+
+ 	a[href*="plus.google.com"]{
+ 		background-image: url('../../../img/icon-google-plus.png');
+ 	}
+}
+
+.menu-lang {
+	float: left;
+	width: 40%;
+	height: 27px;
+	margin-bottom: 0.5em;
+}
+
+#lang_sel_list {
+	//width: 60px;
+}
+
+#lang_sel_list ul {
+	width: 60px;
+	display: block;
+	margin: 0 auto !important;
+	position: relative;
+}
+
+#lang_sel_list li {
+	padding-top: 0.3em !important;
+}
+
+#lang_sel_list a, #lang_sel_list a:visited,
+#lang_sel_list ul a, #lang_sel_list_list ul a:visited,
+
+ {
+	background: none;
+}
+
+.button-copyright {
+	line-height: 0.8em;
+	padding: 0;
+	display: block;
+	text-align: center;
+
+
+	a {
+		color: $noir;
+		font-size: 0.75em;		
+
+		&:hover {
+			color: $rouge;
+		}
+
+	}
+}
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+	margin-top: 10px;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	position: relative;
+}
+.main-navigation a {
+	color: $noir;
+	font-size:0.95em;
+	padding: 6px 0;
+	margin: 0 35px;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-bottom:1px solid $gris;
+	transition: 0.2s all ease-in;
+	font-family: maven_pro_light300;
+	font-weight:normal;
+}
+
+.main-navigation a:hover,
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-parent > a,
+.main-navigation .current-page-parent > a {
+	color: $rouge;
+}
+
+
+.main-navigation ul ul {
+	display: none;
+	float: left;
+	left: 200px;
+	position: absolute;
+	top: 0;
+	z-index: 99999;
+	background: #f2f2f2;
+	padding-left: 1em;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+}
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+	display: none;
+}
+@media screen and (max-width: 40em) {
+	.menu-toggle,
+	.main-navigation.toggled .nav-menu {
+		display: block;
+		text-align:center;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+}

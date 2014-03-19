@@ -1,0 +1,99 @@
+.api-menu {
+
+	h2 {
+		margin-bottom: 1em;
+	}
+
+	h3 {
+		display: inline;
+		border-bottom: 1px solid white;
+		padding-bottom: 0.3em;
+	}
+
+	.menu-titre-cat {
+		margin: 2em 0 0.5em;
+		text-transform: uppercase;
+	}
+
+	.menu-titre-sous-cat {
+		margin: 0.5em 0;
+		text-transform: uppercase;
+	}
+
+	.menu-liste {
+		margin: 0 0 1em;
+
+		td { padding-top: 0.4em;
+			padding-bottom: 0.4em;
+		}
+	}
+
+	.dish-label{
+
+	}
+
+	.dish-description {
+		font-size:0.8em;
+		font-family: 'latolight_italic';
+	}
+
+	.dish {
+		width: 50%;
+		display:inline-block; 
+	}
+
+	.dish-price-block {
+		font-size: 0.85em;
+	}
+
+	.price-dish {
+		width: percentage(1/6);
+		padding: 0 0.5em;
+		display:inline-block; 
+		vertical-align: top;
+	}
+
+	.price-2eme-dish {
+		width: percentage(1/6);
+		padding: 0 0.5em;
+		display:inline-block; 
+		vertical-align: top;
+	}
+
+	.price-3eme-dish {
+		width: percentage(1/6);
+		padding: 0 0.5em;
+		display:inline-block;
+		vertical-align: top; 
+	}
+
+	.menu-colspan-2 {
+		width: percentage(2/3);
+	}
+
+	.menu-colspan-3 {
+		width: percentage(5/6);
+	}
+
+	.menu-colspan-4 {
+	}
+
+	#cat956722 h3 {
+		border: none;
+	}
+
+	#dish8650962 .dish, #dish8650982 .dish {
+		position: relative;
+	}
+
+	#dish8650962 .dish::after, #dish8650982 .dish::after {
+		content: "";
+		position: absolute;
+		width: 1em;
+		border-bottom: 1px solid $rouge;
+	}
+	
+	#dish8650962 .dish-description, #dish8650982 .dish-description {
+		padding-bottom: 1em;
+	}
+}

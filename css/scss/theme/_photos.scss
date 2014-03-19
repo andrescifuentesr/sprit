@@ -1,0 +1,39 @@
+#controls {
+	background: transparent url("../../../img/bg-noir-transparent.png");
+	background: rgba(0, 0, 0, 0.8);
+
+	.button {
+		font-size: 0.75em;
+		font-family: maven_pro_light300;
+		font-weight:normal;
+	}
+
+	.one-half {
+		width:50%;
+		display: inline-block;
+		vertical-align: top;
+		position: relative;
+		border-left: 1px solid $white;
+	}
+
+	.button-visite {
+		padding-left: 5%;
+		@extend %vertical-center;
+	}
+}
+
+.visite-virtuelle {
+
+	p {
+		margin: 0;
+		height: 100%;
+	}
+
+	.button {
+		margin: 0 auto;
+	}
+
+	.button-photos {
+		@extend %center;
+	}
+}

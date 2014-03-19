@@ -1,0 +1,42 @@
+.module-newsletter {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	background: transparent url("../../../img/bg-noir-transparent.png");
+	background: rgba(0, 0, 0, 0.8);
+	padding: 3em 5em;
+	color: #fff;
+	width: 470px;
+	@include mq(tablet) {padding: 3em 1em; width: 350px;}
+	@include mq(phone) {position: static;
+		width:90%; 
+		transform:translate(0, 0); 
+		padding: 3em 1em;
+		margin: 1em 5% 0;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	input[type="text"] {
+		margin-right: 0.5em;
+	}
+
+	input[type="submit"] {
+		background: url('../../../img/bg-bouton.png') no-repeat;
+		color: $noir;
+		text-transform: uppercase;
+		font-family: maven_pro_light300;
+		font-weight:normal;
+		font-size: 1em;
+		padding: .4em 1em .3em 2.5em;
+		border: none;
+		transition: 0.2s background ease-in;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

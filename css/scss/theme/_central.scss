@@ -1,0 +1,90 @@
+.module-central {
+	background: transparent url("../../../img/bg-noir-transparent.png");
+	background: rgba(0, 0, 0, 0.8);
+	color: $white;
+	width:70%;
+	padding: 4em;
+	margin: 2em 15%;
+	min-height:600px;
+	@include mq(tablet) {width:90%; margin: 2em 5%; }
+	@include mq(phone) {width:90%; margin: 2em 5%;}
+
+	h1 {color: $rouge;
+		border-bottom: 1px solid $border-gris;
+		padding-bottom: 0.4em;
+		margin-bottom: 0.6em;
+	}
+
+	p {
+		font-size: 0.85em
+	}
+
+	iframe {
+		margin: 0 auto;
+		display: block;
+	}
+}
+
+.grid {
+	margin-left: -30px;
+	margin-top: 2em;
+}
+
+.module-presse {
+	@extend %grid__item;
+	@extend %one-quarter;
+
+	img {
+		width: 100%;
+		display: block;
+		//transition: 0.3s opacity linear;
+	}
+
+	a:hover img {
+		opacity: 0.5;
+	}
+}
+
+
+// page press
+.module-presse-texte {
+	background: $white;
+	padding: 0.5em;
+	border-top: 5px solid $gris-fonce;
+	color: $noir;
+
+	h3 {
+		color: $noir;
+		font-size: 0.85em;
+		margin: 0;
+	}
+
+	p {
+		font-size: 0.85em;
+		margin: 0;
+	}
+
+	.lire-suite {
+		display: block;
+		font-size: 0.85em;
+		font-style: italic;
+		color: $rouge;
+		padding-left:0.5em;
+		position: relative;
+
+		&::before {
+			content : '';
+			position: absolute;
+			left:0;
+			top: 7px;
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid $rouge;
+		}
+	}
+}
+
+.triangle {
+	position: relative;
+}
+
