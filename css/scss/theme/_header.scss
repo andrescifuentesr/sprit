@@ -240,6 +240,7 @@ html, body, #page, #content {
 	z-index: 99999;
 	background: #f2f2f2;
 	padding-left: 1em;
+	@include mq(phone) {width:100%; position: relative; left: 0; padding-left: 0;}
 }
 .main-navigation ul ul ul {
 	left: 100%;
@@ -247,6 +248,7 @@ html, body, #page, #content {
 }
 .main-navigation ul ul a {
 	width: 200px;
+	@include mq(phone) {width:100%; }
 }
 .main-navigation ul ul li {
 }

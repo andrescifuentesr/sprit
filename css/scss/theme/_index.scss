@@ -18,6 +18,7 @@
 .module-home {
 	color: #fff;
 	font-size: 2em;
+	letter-spacing: 3px;
 	font-family: maven_pro_light300;
 	font-weight:normal;
 	text-transform: uppercase;
@@ -29,8 +30,8 @@
 	background: transparent url("../../../img/bg-noir-transparent.png");
 	background: transparentize(#000, 0.3);
 	transition: 0.3s background ease-out;
-
-	letter-spacing: 3px;
+	@include mq(tablet) {font-size: 1.6em;}
+	@include mq(phone) {font-size: 1.5em;}
 
 	&:hover {
 		background: transparent;
