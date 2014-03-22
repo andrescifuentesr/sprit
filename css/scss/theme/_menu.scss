@@ -78,22 +78,29 @@
 	.menu-colspan-4 {
 	}
 
-	#cat956722 h3 {
+	#cat956722 h3, #cat1026742 h3 {
 		border: none;
 	}
 
-	#dish8650962 .dish, #dish8650982 .dish {
+	#dish8650962 .dish, #dish8650982 .dish,
+	#dish9382602 .dish, #dish9382622 .dish
+
+	{
 		position: relative;
 	}
 
-	#dish8650962 .dish::after, #dish8650982 .dish::after {
+	#dish8650962 .dish::after, #dish8650982 .dish::after,
+	#dish9382602 .dish::after, #dish9382622 .dish::after 
+	{
 		content: "";
 		position: absolute;
 		width: 1em;
 		border-bottom: 1px solid $rouge;
 	}
 	
-	#dish8650962 .dish-description, #dish8650982 .dish-description {
+	#dish8650962 .dish-description, #dish8650982 .dish-description,
+	#dish9382602 .dish-description, #dish9382622 .dish-description
+	{
 		padding-bottom: 1em;
 	}
 }

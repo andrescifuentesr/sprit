@@ -7,17 +7,23 @@ error_reporting(E_ALL);
 $postId = get_the_ID();
 
 switch ($postId) {
-	case '91': //Menu
+	case '5': //Menu
 		$idCarte = '350812';
 		break;
-	case '201': //Menu
+	case '199': //Menu
+		$idCarte = '360612';
+		break;	
+	case '91': //A la carte
 		$idCarte = '350812';
+		break;
+	case '201': //A la carte
+		$idCarte = '360612';
 		break;	
 	case '93': //carte vin
 		$idCarte = '352792';
 		break;
 	case '203': //carte vin
-		$idCarte = '352792';
+		$idCarte = '360622';
 		break;	
 	//case '95': // boisson ??????
 	//	$idCarte = '350822';
