@@ -7,17 +7,24 @@
 	background: rgba(0, 0, 0, 0.8);
 	padding: 3em 5em;
 	color: #fff;
-	width: 470px;
-	@include mq(tablet) {padding: 3em 1em; width: 350px;}
+	width: 520px;
+	@include mq(tablet) {padding: 3em 1em; width: 370px; text-align: center;}
 	@include mq(phone) {position: static;
 		width:90%; 
 		transform:translate(0, 0); 
 		padding: 3em 1em;
 		margin: 1em 5% 0;
+		text-align: center;
 	}
 
 	ul {
 		margin: 0;
+	}
+
+	.sml_email, .sml_submit {
+		float: left;
+		@include mq(tablet) {float: none; }
+		@include mq(phone) {float: none; }
 	}
 
 	input[type="text"] {

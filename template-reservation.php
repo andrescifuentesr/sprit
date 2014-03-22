@@ -9,8 +9,41 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="module-newsletter">
 				<?php while ( have_posts() ) : the_post(); ?>
-					<?php the_content(); ?>
-					<?php get_sidebar(); ?>
+
+					<?php
+						$argsFr = array(
+							'prepend' => '<h1>Newsletter</h1><p>Recevez nos actualités !</p>', 
+							'showname' => false,
+							'nametxt' => 'Name:', 
+							'nameholder' => 'Name...', 
+							'emailtxt' => 'Email : ',
+							'emailholder' => '', 
+							'showsubmit' => true, 
+							'submittxt' => 'ENVOYER', 
+							'jsthanks' => false,
+							'thankyou' => 'Nous vous remercions de votre souscription à nôtre newsletter !'
+						);
+
+						$argsEn = array(
+							'prepend' => '<h1>Newsletter</h1><p>Receive our notifications!</p>', 
+							'showname' => false,
+							'nametxt' => 'Name:', 
+							'nameholder' => 'Name...', 
+							'emailtxt' => 'Email : ',
+							'emailholder' => '', 
+							'showsubmit' => true, 
+							'submittxt' => 'SUBMIT', 
+							'jsthanks' => false,
+							'thankyou' => 'Thank you for subscribing to our mailing list !'
+						);
+						
+
+						if ( ICL_LANGUAGE_CODE == 'fr' ) {
+							echo smlsubform($argsFr);	
+						} else {
+							echo smlsubform($argsEn);
+						}
+					?>
 
 					<!-- on capture le thumbnail pour le background -->
 					<?php $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'full' ); ?>
