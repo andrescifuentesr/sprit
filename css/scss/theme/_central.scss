@@ -7,7 +7,7 @@
 	margin: 2em 15%;
 	min-height:600px;
 	@include mq(tablet) {width:90%; margin: 2em 5%; }
-	@include mq(phone) {width:90%; margin: 2em 5%;}
+	@include mq(phone) {width:95%; margin: 2em 2.5%; padding: 1em;}
 
 	h1 {color: $rouge;
 		border-bottom: 1px solid $border-gris;
@@ -33,6 +33,10 @@
 .module-presse {
 	@extend %grid__item;
 	@extend %one-quarter;
+	@extend %tablet--one-half;
+	@extend %phone--one-half;
+	@include mq(tablet) {margin-top: 1em; }
+	@include mq(phone) {margin-top: 1em; }
 
 	img {
 		width: 100%;

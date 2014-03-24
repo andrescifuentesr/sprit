@@ -729,13 +729,17 @@ object {
 /**
  * Our responsive classes, if we have enabled them.
  */
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 40em) {
   /**
    * Whole
    */
   /**
    * Halves
    */
+  .module-presse {
+    width: 50%;
+  }
+
   /**
    * Thirds
    */
@@ -758,13 +762,17 @@ object {
    * Twelfths
    */
 }
-@media only screen and (min-width: 45em) and (max-width: 65em) {
+@media only screen and (min-width: 40em) and (max-width: 65em) {
   /**
    * Whole
    */
   /**
    * Halves
    */
+  .module-presse {
+    width: 50%;
+  }
+
   /**
    * Thirds
    */
@@ -1469,7 +1477,7 @@ html, body, #page, #content {
   #main {
     width: 100%;
     margin: 0;
-    overflow: auto;
+    overflow: visible;
   }
 }
 
@@ -1530,13 +1538,13 @@ html, body, #page, #content {
 
 .menu-social {
   float: left;
-  width: 60%;
+  width: 65%;
   border-right: 1px solid #d7d7d7;
   margin-bottom: 0.5em;
 }
 .menu-social ul {
   margin: 0 auto;
-  width: 110px;
+  width: 130px;
 }
 .menu-social li {
   display: inline;
@@ -1548,7 +1556,7 @@ html, body, #page, #content {
   height: 26px;
   width: 26px;
   border-radius: 26px;
-  margin-left: 0.5em;
+  margin-left: 0.3em;
   transition: 0.2s all ease-in;
 }
 .menu-social a[href*="facebook.com"] {
@@ -1561,6 +1569,10 @@ html, body, #page, #content {
 }
 .menu-social a[href*="plus.google.com"] {
   background: url("../../../img/icon-google-plus.svg") no-repeat #6f6f6f center center;
+  text-align: center;
+}
+.menu-social a[href*="tripadvisor.fr"] {
+  background: url("../../../img/icon-trip-advisor.svg") no-repeat #6f6f6f center center;
   text-align: center;
 }
 .menu-social a:hover {
@@ -1576,10 +1588,13 @@ html, body, #page, #content {
 .no-svg .menu-social a[href*="plus.google.com"] {
   background-image: url("../../../img/icon-google-plus.png");
 }
+.no-svg .menu-social a[href*="tripadvisor.fr"] {
+  background-image: url("../../../img/icon-trip-advisor.png");
+}
 
 .menu-lang {
   float: left;
-  width: 40%;
+  width: 35%;
   height: 27px;
   margin-bottom: 0.5em;
 }
@@ -1720,6 +1735,11 @@ html, body, #page, #content {
 .site-main {
   position: relative;
 }
+@media (max-width: 40em) {
+  .site-main {
+    min-height: 300px;
+  }
+}
 
 .module-home-container {
   position: absolute;
@@ -1751,6 +1771,7 @@ html, body, #page, #content {
 @media (max-width: 40em) {
   .module-home {
     font-size: 1.5em;
+    height: 150px;
   }
 }
 .module-home:hover {
@@ -1795,6 +1816,7 @@ html, body, #page, #content {
 @media (max-width: 40em) {
   .module-left {
     width: 100%;
+    padding: 2em 1em;
   }
 }
 .module-left h1 {
@@ -1854,8 +1876,9 @@ html, body, #page, #content {
 }
 @media (max-width: 40em) {
   .module-central {
-    width: 90%;
-    margin: 2em 5%;
+    width: 95%;
+    margin: 2em 2.5%;
+    padding: 1em;
   }
 }
 .module-central h1 {
@@ -1877,6 +1900,16 @@ html, body, #page, #content {
   margin-top: 2em;
 }
 
+@media only screen and (min-width: 40em) and (max-width: 65em) {
+  .module-presse {
+    margin-top: 1em;
+  }
+}
+@media (max-width: 40em) {
+  .module-presse {
+    margin-top: 1em;
+  }
+}
 .module-presse img {
   width: 100%;
   display: block;
@@ -1931,7 +1964,7 @@ html, body, #page, #content {
   background: rgba(0, 0, 0, 0.8);
   padding: 3em 5em;
   color: #fff;
-  width: 520px;
+  width: 550px;
 }
 @media only screen and (min-width: 40em) and (max-width: 65em) {
   .module-newsletter {

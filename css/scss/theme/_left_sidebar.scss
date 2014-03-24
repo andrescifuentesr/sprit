@@ -11,7 +11,7 @@
 	padding: 0 2em;
 	padding-top: 8em;
 	@include mq(tablet) {width:70%; }
-	@include mq(phone) {width:100%; }
+	@include mq(phone) {width:100%; padding: 2em 1em;}
 
 	h1 {font-size: 2em;
 	}

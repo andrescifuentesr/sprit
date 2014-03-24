@@ -22,7 +22,7 @@ html, body, #page, #content {
 	height: 100%;
 	position: relative;
 	overflow-y: scroll;
-	@include mq(phone) {width:100%; margin: 0; overflow:auto;}
+	@include mq(phone) {width:100%; margin: 0; overflow: visible;}
 }
 
 .site-branding  a {
@@ -81,13 +81,13 @@ html, body, #page, #content {
 
 .menu-social{
 	float: left;
-	width: 60%;
+	width: 65%;
 	border-right: 1px solid $gris;
 	margin-bottom: 0.5em;
 
 	ul {
 		margin: 0 auto;
-		width: 110px;
+		width: 130px;
 	}
 
 
@@ -103,7 +103,7 @@ html, body, #page, #content {
 		height: 26px;
 		width: 26px;
 		border-radius: 26px;
-		margin-left: 0.5em;
+		margin-left: 0.3em;
 		transition: 0.2s all ease-in;
 	}
 
@@ -119,6 +119,11 @@ html, body, #page, #content {
 
 	a[href*="plus.google.com"] {
 		background: url('../../../img/icon-google-plus.svg') no-repeat $gris-fonce center center;
+		text-align: center;
+	}
+
+	a[href*="tripadvisor.fr"] {
+		background: url('../../../img/icon-trip-advisor.svg') no-repeat $gris-fonce center center;
 		text-align: center;
 	}
 
@@ -141,11 +146,15 @@ html, body, #page, #content {
  	a[href*="plus.google.com"]{
  		background-image: url('../../../img/icon-google-plus.png');
  	}
+
+ 	a[href*="tripadvisor.fr"]{
+ 		background-image: url('../../../img/icon-trip-advisor.png');
+ 	}
 }
 
 .menu-lang {
 	float: left;
-	width: 40%;
+	width: 35%;
 	height: 27px;
 	margin-bottom: 0.5em;
 }

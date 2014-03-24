@@ -121,8 +121,8 @@ $use-markup-fix:        true!default;
  * that the breakpoint fires at.
  */
 $breakpoints: (
-    'phone' '(max-width: 45em)',
-    'tablet' '(min-width: 45em) and (max-width: 65em)',
+    'phone' '(max-width: 40em)',
+    'tablet' '(min-width: 40em) and (max-width: 65em)',
     'lap' '(min-width: 65em) and (max-width: 90em)',
     'desk' '(min-width: 90em)'
 );

@@ -854,7 +854,7 @@ object {
  * Our responsive classes, if we have enabled them.
  */
 
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 40em) {
   /**
    * Whole
    */
@@ -862,6 +862,10 @@ object {
   /**
    * Halves
    */
+
+  .module-presse {
+    width: 50%;
+  }
 
   /**
    * Thirds
@@ -892,7 +896,7 @@ object {
    */
 }
 
-@media only screen and (min-width: 45em) and (max-width: 65em) {
+@media only screen and (min-width: 40em) and (max-width: 65em) {
   /**
    * Whole
    */
@@ -900,6 +904,10 @@ object {
   /**
    * Halves
    */
+
+  .module-presse {
+    width: 50%;
+  }
 
   /**
    * Thirds
@@ -1674,7 +1682,7 @@ body,
   #main {
     width: 100%;
     margin: 0;
-    overflow: auto;
+    overflow: visible;
   }
 }
 
@@ -1740,14 +1748,14 @@ body,
 
 .menu-social {
   float: left;
-  width: 60%;
+  width: 65%;
   border-right: 1px solid #d7d7d7;
   margin-bottom: 0.5em;
 }
 
 .menu-social ul {
   margin: 0 auto;
-  width: 110px;
+  width: 130px;
 }
 
 .menu-social li {
@@ -1761,7 +1769,7 @@ body,
   height: 26px;
   width: 26px;
   border-radius: 26px;
-  margin-left: 0.5em;
+  margin-left: 0.3em;
   -webkit-transition: 0.2s all ease-in;
   transition: 0.2s all ease-in;
 }
@@ -1781,6 +1789,11 @@ body,
   text-align: center;
 }
 
+.menu-social a[href*="tripadvisor.fr"] {
+  background: url("../../../img/icon-trip-advisor.svg") no-repeat #6f6f6f center center;
+  text-align: center;
+}
+
 .menu-social a:hover {
   background-color: #e31937;
 }
@@ -1797,9 +1810,13 @@ body,
   background-image: url("../../../img/icon-google-plus.png");
 }
 
+.no-svg .menu-social a[href*="tripadvisor.fr"] {
+  background-image: url("../../../img/icon-trip-advisor.png");
+}
+
 .menu-lang {
   float: left;
-  width: 40%;
+  width: 35%;
   height: 27px;
   margin-bottom: 0.5em;
 }
@@ -1952,6 +1969,12 @@ body,
   position: relative;
 }
 
+@media (max-width: 40em) {
+  .site-main {
+    min-height: 300px;
+  }
+}
+
 .module-home-container {
   position: absolute;
   width: 100%;
@@ -1985,6 +2008,7 @@ body,
 @media (max-width: 40em) {
   .module-home {
     font-size: 1.5em;
+    height: 150px;
   }
 }
 
@@ -2034,6 +2058,7 @@ body,
 @media (max-width: 40em) {
   .module-left {
     width: 100%;
+    padding: 2em 1em;
   }
 }
 
@@ -2103,8 +2128,9 @@ body,
 
 @media (max-width: 40em) {
   .module-central {
-    width: 90%;
-    margin: 2em 5%;
+    width: 95%;
+    margin: 2em 2.5%;
+    padding: 1em;
   }
 }
 
@@ -2127,6 +2153,18 @@ body,
 .grid {
   margin-left: -30px;
   margin-top: 2em;
+}
+
+@media only screen and (min-width: 40em) and (max-width: 65em) {
+  .module-presse {
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 40em) {
+  .module-presse {
+    margin-top: 1em;
+  }
 }
 
 .module-presse img {
@@ -2189,7 +2227,7 @@ body,
   background: rgba(0, 0, 0, 0.8);
   padding: 3em 5em;
   color: #fff;
-  width: 520px;
+  width: 550px;
 }
 
 @media only screen and (min-width: 40em) and (max-width: 65em) {
