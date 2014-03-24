@@ -31,12 +31,17 @@ get_header(); ?>
 						<?php $icl_object_id_vino = icl_object_id('7', 'page', true); ?>
 						<?php $icl_object_id_foto = icl_object_id('11', 'page', true); ?>
 						<?php $icl_object_id_resa = icl_object_id('9', 'page', true); ?>
+
+						<?php ( ICL_LANGUAGE_CODE == 'fr' ) ? $menu_txt = "Le menu" : $menu_txt = "Menu" ?>
+						<?php ( ICL_LANGUAGE_CODE == 'fr' ) ? $vino_txt = "Vinoteca" : $vino_txt = "Vinoteca" ?>
+						<?php ( ICL_LANGUAGE_CODE == 'fr' ) ? $foto_txt = "Photos" : $foto_txt = "Photos" ?>
+						<?php ( ICL_LANGUAGE_CODE == 'fr' ) ? $resa_txt = "Réservation" : $resa_txt = "Booking" ?>
 						
 						<div class="module-home-container">
-							<a href="<?php echo esc_url( get_permalink( $icl_object_id_menu ) ); ?>" class="module-home module-home-up module-home-left"><span>Le menu</span></a>
-							<a href="<?php echo esc_url( get_permalink( $icl_object_id_vino ) ); ?>" class="module-home module-home-up"><span>Vinoteca</span></a>
-							<a href="<?php echo esc_url( get_permalink( $icl_object_id_foto ) ); ?>" class="module-home module-home-down module-home-left"><span>Photos</span></a>
-							<a href="<?php echo esc_url( get_permalink( $icl_object_id_resa ) ); ?>" class="module-home module-home-down"><span>Réservation</span></a>
+							<a href="<?php echo esc_url( get_permalink( $icl_object_id_menu ) ); ?>" class="module-home module-home-up module-home-left"><span><?php echo $menu_txt?></span></a>
+							<a href="<?php echo esc_url( get_permalink( $icl_object_id_vino ) ); ?>" class="module-home module-home-up"><span><?php echo $vino_txt?></span></a>
+							<a href="<?php echo esc_url( get_permalink( $icl_object_id_foto ) ); ?>" class="module-home module-home-down module-home-left"><span><?php echo $foto_txt?></span></a>
+							<a href="<?php echo esc_url( get_permalink( $icl_object_id_resa ) ); ?>" class="module-home module-home-down"><span><?php echo $resa_txt?></span></a>
 						</div>
 						<!-- on capture le thumbnail pour le background -->
 						<?php $image_src = wp_get_attachment_image_src( get_post_thumbnail_id(),'full' ); ?>
