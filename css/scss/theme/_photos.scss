@@ -14,11 +14,15 @@
 		vertical-align: top;
 		position: relative;
 		border-left: 1px solid $white;
+		@include mq(phone) {width: 100%;}
 	}
 
 	.button-visite {
 		padding-left: 5%;
-		@extend %vertical-center;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		@include mq(phone) {position:static; text-align:center;}
 	}
 }
 
@@ -31,9 +35,14 @@
 
 	.button {
 		margin: 0 auto;
+		@include mq(phone) {margin: 15px 0}
 	}
 
 	.button-photos {
-		@extend %center;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		@include mq(phone) {position:static; text-align:center; transform: translate(0, 0);}
 	}
 }

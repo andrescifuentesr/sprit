@@ -33,7 +33,7 @@
 	background: transparentize(#000, 0.3);
 	transition: 0.3s background ease-out;
 	@include mq(tablet) {font-size: 1.6em;}
-	@include mq(phone) {font-size: 1.5em; height: 150px;}
+	@include mq(phone) {font-size: 1.5em; }
 
 	&:hover {
 		background: transparent;

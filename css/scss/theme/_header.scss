@@ -1,6 +1,6 @@
 html, body, #page, #content {
 	height: 100%;
-	@include mq(phone) {height:auto; }
+	//@include mq(phone) {height:auto; }
 }
 
 .site-header {
@@ -13,7 +13,7 @@ html, body, #page, #content {
 	width: 230px;
 	padding: 25px 0 0;
 	//@include mq(tablet) {width:100%; }
-	@include mq(phone) {width:100%; position: static;}
+	@include mq(phone) {width:100%; position: relative; padding: 10px;}
 }
 
 #main{ 
@@ -32,6 +32,10 @@ html, body, #page, #content {
 	width: 64px;
 	text-indent: -9999px;
 	margin: 0 auto;
+	@include mq(phone) {background: url('../../../img/logo-esprit-small.svg') no-repeat;
+		height: 100px;
+		width: 50%;
+	}
 }
 
 .no-svg .site-branding  a {
@@ -76,7 +80,7 @@ html, body, #page, #content {
 	bottom:0.2em;
 	left:0;
 	width: 100%;
-	@include mq(phone) {left:50%; top: 0.5em; width: 50%; bottom:auto;}
+	@include mq(phone) {left:50%; top: 1em; width: 50%; bottom:auto;}
 }
 
 .menu-social{
@@ -186,6 +190,7 @@ html, body, #page, #content {
 	padding: 0;
 	display: block;
 	text-align: center;
+	@include mq(phone) {display:none;}
 
 
 	a {
@@ -257,7 +262,7 @@ html, body, #page, #content {
 }
 .main-navigation ul ul a {
 	width: 200px;
-	@include mq(phone) {width:100%; }
+	@include mq(phone) {width:100%; margin:0}
 }
 .main-navigation ul ul li {
 }
@@ -281,6 +286,10 @@ html, body, #page, #content {
 	.main-navigation.toggled .nav-menu {
 		display: block;
 		text-align:center;
+	}
+
+	.menu-toggle {
+		font-size: 2em;
 	}
 
 	.main-navigation ul {

@@ -1281,6 +1281,7 @@ body {
 @media (max-width: 40em) {
   #controls-wrapper {
     padding-left: 0;
+    height: auto;
   }
 }
 
@@ -1644,15 +1645,6 @@ body,
   height: 100%;
 }
 
-@media (max-width: 40em) {
-  html,
-  body,
-  #page,
-  #content {
-    height: auto;
-  }
-}
-
 .site-header {
   position: fixed;
   left: 0;
@@ -1667,7 +1659,8 @@ body,
 @media (max-width: 40em) {
   .site-header {
     width: 100%;
-    position: static;
+    position: relative;
+    padding: 10px;
   }
 }
 
@@ -1693,6 +1686,14 @@ body,
   width: 64px;
   text-indent: -9999px;
   margin: 0 auto;
+}
+
+@media (max-width: 40em) {
+  .site-branding a {
+    background: url("../../../img/logo-esprit-small.svg") no-repeat;
+    height: 100px;
+    width: 50%;
+  }
 }
 
 .no-svg .site-branding a {
@@ -1740,7 +1741,7 @@ body,
 @media (max-width: 40em) {
   .nav-footer {
     left: 50%;
-    top: 0.5em;
+    top: 1em;
     width: 50%;
     bottom: auto;
   }
@@ -1846,6 +1847,12 @@ body,
   text-align: center;
 }
 
+@media (max-width: 40em) {
+  .button-copyright {
+    display: none;
+  }
+}
+
 .button-copyright a {
   color: #333333;
   font-size: 0.75em;
@@ -1932,6 +1939,7 @@ body,
 @media (max-width: 40em) {
   .main-navigation ul ul a {
     width: 100%;
+    margin: 0;
   }
 }
 
@@ -1951,6 +1959,10 @@ body,
   .main-navigation.toggled .nav-menu {
     display: block;
     text-align: center;
+  }
+
+  .menu-toggle {
+    font-size: 2em;
   }
 
   .main-navigation ul {
@@ -2008,7 +2020,6 @@ body,
 @media (max-width: 40em) {
   .module-home {
     font-size: 1.5em;
-    height: 150px;
   }
 }
 
@@ -2313,8 +2324,25 @@ body,
   border-left: 1px solid white;
 }
 
+@media (max-width: 40em) {
+  #controls .one-half {
+    width: 100%;
+  }
+}
+
 #controls .button-visite {
   padding-left: 5%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+@media (max-width: 40em) {
+  #controls .button-visite {
+    position: static;
+    text-align: center;
+  }
 }
 
 .visite-virtuelle p {
@@ -2324,6 +2352,29 @@ body,
 
 .visite-virtuelle .button {
   margin: 0 auto;
+}
+
+@media (max-width: 40em) {
+  .visite-virtuelle .button {
+    margin: 15px 0;
+  }
+}
+
+.visite-virtuelle .button-photos {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 40em) {
+  .visite-virtuelle .button-photos {
+    position: static;
+    text-align: center;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
 }
 
 .contact #map_canvas {
@@ -2527,20 +2578,12 @@ h4 {
 
 /* ========= Helperclass =========== */
 
-.module-home span,
-.visite-virtuelle .button-photos {
+.module-home span {
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-}
-
-#controls .button-visite {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
 }
 
 a {

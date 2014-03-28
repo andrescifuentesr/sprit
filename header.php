@@ -32,7 +32,7 @@
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<h1 class="menu-toggle"><?php _e( 'Menu', 'sprit' ); ?></h1>
+			<h1 class="menu-toggle"><?php _e( '&#9776; Menu', 'sprit' ); ?></h1>
 			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'sprit' ); ?></a>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

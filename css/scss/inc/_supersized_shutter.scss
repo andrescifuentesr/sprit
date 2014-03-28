@@ -14,7 +14,7 @@
 	/* Controls Bar
 	----------------------------*/
 #controls-wrapper { margin:0 auto; height:50px; width:100%; bottom:0px; left:0; z-index:4;  position:fixed; padding-left:230px;
-	@include mq(phone) {padding-left:0; }
+	@include mq(phone) {padding-left:0; height: auto; }
 }
 #controls { overflow:hidden; height:100%; position:relative; text-align:left; z-index:5; }
 
